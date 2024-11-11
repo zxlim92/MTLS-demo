@@ -20,6 +20,7 @@ Sever FE
 ![image](https://github.com/user-attachments/assets/ffd236bf-058b-4f49-9aae-4848e6a23961)
 
 Client change Keystore (this will make it look like a second client)
+
 ![image](https://github.com/user-attachments/assets/32502286-bbbd-4c46-ae94-ba5f2cd938fd)
 
 - Sever FE
@@ -27,9 +28,11 @@ Client change Keystore (this will make it look like a second client)
 
 
 Using Curl to access MTLS protected endpoint 
+
 ![image](https://github.com/user-attachments/assets/2c8f60df-8d0b-4663-8623-d74a9c11e64b)
 
 Using Curl to access non-protected endpoint
+
 ![image](https://github.com/user-attachments/assets/683a4be1-6f8b-4e3e-911f-acf36e40efeb)
 
 
