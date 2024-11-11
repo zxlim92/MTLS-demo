@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client and Data Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        .data-box {
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            text-align: center;
+        }
+        .data-box p {
+            font-size: 1.2em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+<h1>Client and Data Info</h1>
+<div class="data-box">
+    <p>Unique Clients Connected: <span id="clientCount">Loading...</span></p>
+    <p>Backend Data:</p>
+    <pre id="backendData">Loading...</pre>
+</div>
+
+<script>
+    async function fetchDataUniqueClients() {
+        try {
+            const response = await fetch('/uniqueClientCount');
+            const data = await response.json();
+
+            // Assuming backend provides `uniqueClientCount` and `backendData`
+            document.getElementById('clientCount').textContent = data.uniqueClientCount;
+        } catch (error) {
+            document.getElementById('clientCount').textContent = 'Error';
+        }
+    }
+    async function fetchData() {
+        try {
+            const response = await fetch('/unprotectedData');
+            const data = await response.json();
+            document.getElementById('backendData').textContent = data.Data
+        } catch (error) {
+            document.getElementById('backendData').textContent = 'Error fetching data';
+        }
+    }
+
+    // Fetch data on load and periodically update every 5 seconds
+    fetchDataUniqueClients();
+    fetchData();
+    setInterval(fetchDataUniqueClients, 5000);
+
+
+</script>
+</body>
+</html>

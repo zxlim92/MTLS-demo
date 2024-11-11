@@ -58,4 +58,7 @@ public class SecurityConfig {
             }
         };
     }
+    public int getUniqueClientCount() {
+        return clientCount.get();
+    }
 }
