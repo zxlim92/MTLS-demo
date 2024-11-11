@@ -16,12 +16,14 @@ Client Start and data being GET
 
 
 Sever FE
+
 ![image](https://github.com/user-attachments/assets/ffd236bf-058b-4f49-9aae-4848e6a23961)
 
 Client change Keystore (this will make it look like a second client)
 ![image](https://github.com/user-attachments/assets/32502286-bbbd-4c46-ae94-ba5f2cd938fd)
+
 - Sever FE
--   ![image](https://github.com/user-attachments/assets/12279133-cac1-472f-9ce4-7c8a33ea0c74)
+- ![image](https://github.com/user-attachments/assets/12279133-cac1-472f-9ce4-7c8a33ea0c74)
 
 
 Using Curl to access MTLS protected endpoint 
